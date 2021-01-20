@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * Developer: dev-rubel
+ * GIThub: /dev-rubel
+ * Site: dev-rubel.com
+*/
 namespace App\Http\Controllers;
 
 use App\Models\Project;
@@ -7,6 +12,7 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -72,6 +78,7 @@ class ProjectController extends Controller
     {
         return view('projects.edit', compact('project'));
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -92,6 +99,7 @@ class ProjectController extends Controller
         return redirect()->route('projects.index')
             ->with('success', 'Project updated successfully');
     }
+    
     /**
      * Remove the specified resource from storage.
      *

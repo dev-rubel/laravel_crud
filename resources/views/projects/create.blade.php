@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
+        <div class="col-lg-12 mt-4 margin-tb">
+            <div class="pull-right">
                 <h2>Add New Project</h2>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('projects.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
+            <div class="text-right">
+                <a class="btn btn-success" href="{{ route('projects.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
             </div>
         </div>
     </div>
@@ -22,6 +22,7 @@
             </ul>
         </div>
     @endif
+
     <form action="{{ route('projects.store') }}" method="POST" >
         @csrf
 

@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="col-lg-12 mt-4 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 8 CRUD </h2>
+                <h2>Laravel Basic CRUD </h2>
             </div>
-            <div class="pull-right">
+            <div class="text-right mb-2">
                 <a class="btn btn-success" href="{{ route('projects.create') }}" title="Create a project"> <i class="fas fa-plus-circle"></i>
                     </a>
             </div>
@@ -40,21 +40,20 @@
                 <td>
                     <form action="{{ route('projects.destroy', $project->id) }}" method="POST">
 
-                        <a href="{{ route('projects.show', $project->id) }}" title="show">
-                            <i class="fas fa-eye text-success  fa-lg"></i>
+                        <a href="{{ route('projects.show', $project->id) }}" title="show" class="btn btn-sm btn-info">
+                            <i class="fas fa-eye fa-lg"></i>
                         </a>
 
-                        <a href="{{ route('projects.edit', $project->id) }}">
-                            <i class="fas fa-edit  fa-lg"></i>
+                        <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-warning">
+                            <i class="fas fa-edit fa-lg"></i>
 
                         </a>
 
                         @csrf
                         @method('DELETE')
 
-                        <button type="submit" title="delete" style="border: none; background-color:transparent;">
-                            <i class="fas fa-trash fa-lg text-danger"></i>
-
+                        <button type="submit" title="delete" class="btn btn-sm btn-warning btn-danger" onclick="return confirm('Are you sure?');">
+                            <i class="fas fa-trash fa-lg"></i>
                         </button>
                     </form>
                 </td>
